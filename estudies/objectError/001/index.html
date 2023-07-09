@@ -1,0 +1,25 @@
+<title>Custom error</title>
+
+
+<body>
+    <p>Posso beber?</p><br />
+    <input type="text" placeholder="idade" id="input"><br />
+    <input type="submit" placeholder="idade" onclick="drink()"><br />
+    <spam id="a"></spam>
+    
+    <script>
+        let p = document.getElementById('a')
+        function drink(){
+            let input = document.getElementById('input').value
+            if(!(isNaN(input))){
+                if(input<21){
+                    throw new Error('Você não pode beber com menos de 21')
+                } else {
+                    console.log('Você já está bebendo')
+                }
+            } else {
+                throw new Error('Foi inserido um quaisquer coisas que não seja um inteiro')
+            }
+        }
+    </script>
+</body>
