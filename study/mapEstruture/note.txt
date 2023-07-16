@@ -1,0 +1,62 @@
+poderiamos dizer que map() é uma estrutura javascript
+como um dicionario, pois map() tem, chave e valor( como dicionarios também tem )
+
+para criar uma chave e um valor, usamor o set()
+
+map.set('key', value)
+
+para chamar usamos o get()
+
+console.log(map.get('key'))
+
+Outher methods:
+
+map.size() -> return size of map() collections
+map.delete('key') -> delete key and value relacioned
+map.clear('key') -> clear values of keys
+map.values() -> return all keys in the sequence as the sequence of keys
+map.keys() -> return all keys in the sequence as the sequence of values
+
+---------------------------
+Questões de conversão:
+Apesar de não ter como fazer uma "conversão" de lógica
+Podemos relacionar as listas com o map:
+
+```
+let a = [ 1, 2, 3, 4, 5, 6, 7]
+
+let bMapList = new Map([
+	[1, 1]
+	[2, 2]
+	 ...
+)]
+```
+
+Essa é a forma declaração de um map de objeto( que podemos usar
+para relacionar maps com arrays javascript) 
+
+Como esperado se tratarmos cada [key, value] como dentro de uma lista
+conseguimos criar por exemplo um for que traz uma listade chaves e
+valores(equivalentes)
+
+
+========================>
+forEach() => uma tradução pode-ser para cada
+ex:
+array.forEach(() => {
+  console.log('ola')
+})
+// ola 
+(quantidade de indices existentes no array)
+
+(as) => {}
+
+as = item iterado no array
+========================>
+
+no Map() temos uma utilidade parecida do forEach()
+
+
+Conseguimos criar um Map() a partir de object.entries(obj), pois 
+ele retorna exatamente na forma de interpretação do map() 
+

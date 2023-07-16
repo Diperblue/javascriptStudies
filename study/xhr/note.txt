@@ -1,0 +1,28 @@
+readystate se dá na resolução da requisição do ajax(xhr)
+
+ele dirá como foi a requisição tendo um código return iqual a cada resposta
+
+( sendo xhr = new XMLHttpRequest) => for objeto xmlhttprequest
+xhr.readystate == return code of requisition
+
+xhr.onreadystatechange => variavel do xhr que fica verificando constântemente a mudança
+do objeto xhr
+
+xhr.status => retorna o codigo apos a requisição
+
+normalmente se faz uma combinação de status code é de onreadystatechange, para poder
+utilizar do xhr apos a requisição
+
+xhr.open("requisição", "url", "sincrono ou assincrono")
+
+xhr.send() => toda a configuração e concretizada e a requisição e mandada
+
+
+=======================
+
+Para mandar um post, você tem que ter criado o documento json, para isso. 
+xhr.open("POST", "URL")
+xhr.send(documento)
+
+
+=> documento = dic

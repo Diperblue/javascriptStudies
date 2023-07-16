@@ -1,0 +1,4 @@
+Resumidamente envolver um objeto
+em uma um "aninhado" no prototype
+para qualquer outro objeto criado 
+seja eventualmente herdado dele 

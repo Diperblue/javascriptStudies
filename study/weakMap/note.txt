@@ -1,0 +1,15 @@
+A principal diferença, entre o weakmap e o map é em relação ao garbage
+collector
+no map ele guarda um clone da variavel, então mesmo se a referência for
+resscrita
+é modificada deixando nula, a mesma será coletada pelo garbage collector
+mas no map ainda haverá há variavel(mas de forma literal, pois a mesma foi
+clonada)
+
+No weakmap isso não acontece!!
+
+Além disso, no weakmap ele só vai receber variaveis
+
+CENARIOS INTERESSANTES:
+ - Criação de dados adicionais dependentes da existencia do objeto
+ - Caching	

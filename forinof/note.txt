@@ -1,0 +1,7 @@
+for..in
+-> retorna as chaves do dicionario no "loop", se caso não for um dicionario,
+por exemplo seja um array normal, ele vai retornar os indices até o final
+
+for..of
+-> retorna os valores das chaves, se caso seja um array, vai retornar os valores
+do array.

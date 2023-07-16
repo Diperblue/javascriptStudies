@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const xhr = new XMLHttpRequest();
+        let documento = {
+            id: 1,
+            products: [
+                {
+                    id: 1,
+                    quantity: 1
+                }
+            ]
+        };
+        let url = "https://dummyjson.com/products/add"
+        if(xhr.readyState == 4 && xhr.status == 200){
+            console.log(xhr.response)
+        }
+        xhr.open("POST", url)
+        xhr.send(documento)
+    </script>
+</body>
+</html>
