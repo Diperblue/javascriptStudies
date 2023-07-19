@@ -1,15 +1,12 @@
-let access = new WeakMap();
-let accessCount = 0;
-
 const objeto1 = { name: "Objeto 1" };
-const objeto2 = { name: "Objeto 2" };
-const objeto3 = { name: "Objeto 3" };
+let access = new WeakMap([[objeto1, 0]]);
 
-// Exemplos de acesso aos objetos
-// ...
+let objProxy = new Proxy(objeto1, {
+  get: (o, property) => {
+    access.set(objeto1, access.get(objeto1) + 1);
+    return o[property];
+  },
+});
 
-class Object extends Object {
-  setGet(obj) {
-    access.set(obj, acessCount + 1);
-  }
-}
+console.log(objProxy.name); // acessando variavel
+console.log(access.get(objeto1)); // verificando log
