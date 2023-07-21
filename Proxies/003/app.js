@@ -9,15 +9,16 @@ let numbers = {
 };
 
 numbers.calc = numbers.listNumb[0] + numbers.listNumb[1];
+numbers.display = numbers.calc; // outcontext
 
 let numbersProxy = new Proxy(numbers, {
   get: (o, propety) => {
-    console.log("o:", o, "\n", "propety:", propety);
-    if (propety != "calc" || propety != "display") {
+    // console.log("o:", o, "\n", "propety:", propety); // debug
+    if (propety != "calc" && propety != "display") {
       throw new Error("Você não pode acessar essa função...");
     }
-    console.log(o[propety]);
+    return o[propety];
   },
 });
 
-console.log(numbersProxy.a);
+console.log("RETURN: ", numbersProxy.calc);
