@@ -1,0 +1,17 @@
+Para criar um set é só usar a classe Set() padrão.
+Podemos perceber certas semelhanças, por causa da definição do Set(),
+        Set(['tea', 2, 3, 'aas', 4])
+
+No objeto Set(), temos os metodos:
+add() - add
+has() - check
+delete() - delete
+clear()  - limpar um objeto set
+size(0) - determinar o tamanho
+Para determinar o tamanho de um set() podemos utilizar o size
+set.size
+
+Os sets são iteraveis!
+Pode-se utilizar o laço `for` pra iterar é a função `Array.from()`
+
+
