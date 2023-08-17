@@ -13,7 +13,7 @@
 // let ini = 1
 // ((1+1)+1)+(1+1)
 
-function calcFiboNum(num){
+/*function calcFiboNum(num){
     let i1 = BigInt(0) // ultimo da soma
     let i2 = BigInt(1) // segundo da soma
     let m = BigInt(0) // m = proximo
@@ -27,10 +27,15 @@ function calcFiboNum(num){
         // i2 = 3
     }
     return m
-}
+}*/
 
 function calcFiboNum(num){
-    // num e vai ser o proximo(m)
-    
+    if(num==0)
+        return 0
+    else if(num==1)
+        return 1
+    else
+        return (calcFiboNum(num-1)+calcFiboNum(num-2))
 }
-console.log(calcFiboNum(45))
+
+console.log(calcFiboNum(10))
