@@ -1,9 +1,9 @@
 "use strict"
 
-function addPost(json, callback) {
+function addPost(text, callback) {
   const $body = document.querySelector('body');
   const $p = document.createElement('p');
-  $p.textContent = JSON.parse(json);
+  $p.textContent = text; 
 
   callback($p);
 
@@ -17,9 +17,9 @@ $button.addEventListener('click', () => {
 
   $XHR.onreadystatechange = function() {
     if(this.readyState == 4 && this.status == 200) {
-      const $response = this.response;
+      const $response = JSON.parse(this.response);
 
-      addPost($response, ($button) => {
+      addPost($response[0]["body"], ($button) => {
         console.log("A requisição foi feita");
       })
     }
