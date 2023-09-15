@@ -17,7 +17,18 @@ class Gato extends Animal {
   }
 }
 
+class Cachorro extends Animal {
+  constructor(name, age, raca) {
+    super(name, age)
+    this.raca = raca
+  }
 
-const cat = new Gato('teste', 27)
+  au() {
+    console.log("Voz: AU AU")
+    console.log("Essa é a minha raça: ",this.raca)
+  }
+}
 
-cat.miau()
+const cachorro = new Cachorro("Doguinho", 123, "woifnewo")
+
+cachorro.au()
