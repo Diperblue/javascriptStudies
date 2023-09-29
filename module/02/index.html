@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração de modulos</title>
+</head>
+<body>
+    <script type="module">
+        import {person} from './a.js'
+        person.name = "teste"
+
+        console.log(person.name)
+    </script>
+    <script type="module">
+        import {person} from './a.js'
+
+        console.log(person.name)
+    </script>
+</body>
+</html>
