@@ -1,0 +1,9 @@
+<script>
+	(async function() {
+		await import('./index.js')
+			.then(module => {
+				const person = new module.default('aa', 12412)
+				person.sayHi()
+			})
+	})()
+</script>
